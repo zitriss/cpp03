@@ -6,7 +6,7 @@
 /*   By: tlize <tlize@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 10:41:04 by tlize             #+#    #+#             */
-/*   Updated: 2026/01/10 17:12:45 by tlize            ###   ########.fr       */
+/*   Updated: 2026/01/12 09:35:03 by tlize            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &old_clap)
 
 ClapTrap::~ClapTrap(void)
 {
-	std::cout << "ClapTrap"<< "Destructor called" << std::endl;
+	std::cout << "ClapTrap"<< " Destructor called" << std::endl;
 }
 
 void	ClapTrap::attack(const std::string& target)
@@ -67,8 +67,15 @@ void	ClapTrap::attack(const std::string& target)
 
 void	ClapTrap::takeDamage(unsigned int amount)
 {
-	this->hit_points = this->hit_points - amount;
-	std::cout << "ClapTrap " << this->name << " took " << amount << " damage" << std::endl;	
+	if (this->hit_points > 0)
+	{
+		this->hit_points = this->hit_points - amount;
+		std::cout << "ClapTrap " << this->name << " took " << amount << " damage" << std::endl;		
+	}
+	else
+	{
+		std::cout << "ClapTrap " << this->name << " is already dead !" << std::endl;
+	}
 }
 
 void ClapTrap::beRepaired(unsigned int amount)

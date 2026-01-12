@@ -6,7 +6,7 @@
 /*   By: tlize <tlize@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 10:41:00 by tlize             #+#    #+#             */
-/*   Updated: 2026/01/10 17:38:54 by tlize            ###   ########.fr       */
+/*   Updated: 2026/01/12 09:35:41 by tlize            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ int main(void) {
 	sun.beRepaired(1);
 
 	std::cout << std::endl << "Invalide" << std::endl;
+	sun.takeDamage(10);
 	sun.takeDamage(10);
 	sun.beRepaired(10);
 	noname.attack("moon");
