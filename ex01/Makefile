@@ -1,6 +1,6 @@
 # == Makefile ==
 
-NAME = ex00
+NAME = scavtrap
 CPP = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98 -I$(INC_DIR)
 

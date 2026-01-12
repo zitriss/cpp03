@@ -6,7 +6,7 @@
 /*   By: tlize <tlize@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/10 17:37:04 by tlize             #+#    #+#             */
-/*   Updated: 2026/01/11 17:34:34 by tlize            ###   ########.fr       */
+/*   Updated: 2026/01/12 09:59:09 by tlize            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,13 @@ public:
 	ScavTrap(const ScavTrap &old_scav);
 	ScavTrap &operator=(const ScavTrap &old_scav);
 	~ScavTrap();
+
+	void	attack(const std::string& target);
+	void	guardGate();
 private:
-	
+	std::string	name;
+	int			hit_points ;
+	int			energy_points;
+	int			attack_damage;
+	bool		isGuarding;
 };
