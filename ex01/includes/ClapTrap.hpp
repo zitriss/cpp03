@@ -6,7 +6,7 @@
 /*   By: tlize <tlize@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 10:41:02 by tlize             #+#    #+#             */
-/*   Updated: 2026/01/10 16:51:54 by tlize            ###   ########.fr       */
+/*   Updated: 2026/01/13 17:56:23 by tlize            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ public:
 	void	attack(const std::string& target);
 	void	takeDamage(unsigned int amount);
 	void	beRepaired(unsigned int amount);
-private:
+protected:
 	std::string	name;
 	int			hit_points ;
 	int			energy_points;
