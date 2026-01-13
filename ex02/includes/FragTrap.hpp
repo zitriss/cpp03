@@ -1,32 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tlize <tlize@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/10 17:37:04 by tlize             #+#    #+#             */
-/*   Updated: 2026/01/13 17:40:35 by tlize            ###   ########.fr       */
+/*   Created: 2026/01/12 12:07:09 by tlize             #+#    #+#             */
+/*   Updated: 2026/01/13 17:40:52 by tlize            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef FRAGTRAP_HPP
+# define FRAGTRAP_HPP
+
 #include "ClapTrap.hpp"
 
-class ScavTrap : public ClapTrap 
+class FragTrap : public ClapTrap 
 {
 public:
-	ScavTrap();
-	ScavTrap(const std::string &name);
-	ScavTrap(const ScavTrap &old_scav);
-	ScavTrap &operator=(const ScavTrap &old_scav);
-	~ScavTrap();
+	FragTrap();
+	FragTrap(const std::string &name);
+	FragTrap(const FragTrap &old_scav);
+	FragTrap &operator=(const FragTrap &old_scav);
+	~FragTrap();
 
 	void	attack(const std::string& target);
-	void	guardGate(void);
+	void	highFivesGuys(void);
 private:
 	std::string	name;
 	int			hit_points ;
 	int			energy_points;
 	int			attack_damage;
-	bool		isGuarding;
 };
+
+#endif
